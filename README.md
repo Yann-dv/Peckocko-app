@@ -12,3 +12,6 @@
 ## Usage ##
 
 You can now access the application at `http://localhost:4200/`
+Credentials : 
+- Email: user@gmail.com
+- Password: user123

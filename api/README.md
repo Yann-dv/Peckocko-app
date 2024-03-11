@@ -1,8 +1,8 @@
-Projet 6 OPCR
+Projet 6 OPCR - api
 
 ## Installaion ##
 Api launch: 
-- cd bakcend
+- cd api
 - nodemon
 
 Api at  http://localhost:3000
