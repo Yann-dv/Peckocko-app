@@ -11,7 +11,7 @@ const path = require('path');
 const sauceRoutes = require ('./routes/sauce');
 const userRoutes = require ('./routes/user');
 const { error } = require('console');
-const connectionString = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER_PASS}@cluster0.hscfyzm.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+const connectionString = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER_PASS}@cluster0.inh05rr.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 mongoose.connect(connectionString,
   { useNewUrlParser: true,
