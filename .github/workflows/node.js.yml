@@ -41,11 +41,12 @@ jobs:
           cd api
           npm install
           npm run start:api
-
+    
       - name: Deploy Angular App
         run: |
           cd app
           npm install -g http-server
+          npm run build:app
           http-server dist/app -p 3000
-
+    
 
