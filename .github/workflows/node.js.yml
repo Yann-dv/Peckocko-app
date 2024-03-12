@@ -11,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check current directory
+        run: |
+          pwd
+          ls -la
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -46,7 +51,7 @@ jobs:
     steps:
       - name: Navigate to project directory
         run: cd $GITHUB_WORKSPACE
-        
+
       - name: Deploy API
         run: |
           npm run start:api
