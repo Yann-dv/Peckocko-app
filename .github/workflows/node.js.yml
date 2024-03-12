@@ -44,13 +44,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check current directory
-        run: ls
-
       - name: Deploy API
         run: |
+          cd Peckocko  
           npm run start:api
 
       - name: Deploy Angular App
         run: |
+          cd Peckocko
           npm run build:app
