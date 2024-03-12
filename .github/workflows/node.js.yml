@@ -44,10 +44,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check current directory
+      - name: Check workflow directory contents
         run: |
-          pwd
-          ls -la
+          ls -la $GITHUB_WORKSPACE
 
       - name: Navigate to project directory
         run: cd $GITHUB_WORKSPACE
