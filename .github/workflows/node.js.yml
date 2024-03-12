@@ -49,7 +49,7 @@ jobs:
 
       - name: Deploy API
         run: |
-          npm --prefix $GITHUB_WORKSPACE/api run start:api
+          npm --prefix ../$GITHUB_WORKSPACE run start:api
 
       - name: Deploy Angular App
         run: |
