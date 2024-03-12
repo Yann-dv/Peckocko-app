@@ -44,12 +44,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Navigate to project directory
+        run: cd $GITHUB_WORKSPACE
+        
       - name: Deploy API
         run: |
-          cd ./Peckocko  
           npm run start:api
 
       - name: Deploy Angular App
         run: |
-          cd ./Peckocko
           npm run build:app
