@@ -54,7 +54,7 @@ jobs:
 
       - name: Deploy API
         run: |
-          npm run start:api
+          npm --prefix . run start:api
 
       - name: Deploy Angular App
         run: |
