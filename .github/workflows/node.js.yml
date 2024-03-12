@@ -25,6 +25,12 @@ jobs:
     - name: Build Angular app
       run: npm run build --if-present
 
+    - name: Set up Environment Variables
+      run: |
+        echo "DB_USER=${{ secrets.DB_USER }}" >> .env
+        echo "DB_USER_PASS=${{ secrets.DB_USER_PASS }}" >> .env
+        echo "DB_NAME=${{ secrets.DB_NAME }}" >> .env
+
   deploy:
     needs: build
     runs-on: ubuntu-latest

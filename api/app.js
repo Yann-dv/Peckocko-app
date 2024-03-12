@@ -1,8 +1,8 @@
 // Ajouter express au projet avec npm install --save express
 // Ajouter database mongoDB : npm install --save mongoose
+require('dotenv').config();
 
 const express = require('express');
-const dotendv = require('dotenv').config()
 const helmet = require("helmet");
 const bodyParser = require('body-parser'); //npm install --save body-parser
 const mongoose = require('mongoose');
@@ -16,8 +16,8 @@ const connectionString = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_
 mongoose.connect(connectionString,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
-  .then(() => console.log('Connexion à MongoDB réussie !'))
-  .catch(error => console.log('Connexion à MongoDB échouée !', error.message));
+  .then(() => console.log('Connexion to MongoDB succeed !'))
+  .catch(error => console.log('Connexion to MongoDB failed !', error.message));
 
 const app = express();
 
@@ -33,7 +33,7 @@ app.use((req, res, next) => { // middleware permettant l'accès à l'api, contou
 
   app.use(bodyParser.json());
 
-app.use('/images', express.static(path.join(__dirname, 'images'))); // indique à express qu'il faut gérer la ressources images comme un dossier statique
+app.use('/images', express.static(path.join(__dirname, 'images'))); // indique à express qu'il faut gérer la ressource images comme un dossier statique
 
 app.use('/api/auth', userRoutes); // Authentification login et signup
 app.use('/api/sauces', sauceRoutes); // Obtenir toutes les sauces
