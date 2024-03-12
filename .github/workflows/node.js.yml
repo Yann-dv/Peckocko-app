@@ -46,10 +46,10 @@ jobs:
     steps:
       - name: Deploy API
         run: |
-          cd Peckocko  
+          cd ./Peckocko  
           npm run start:api
 
       - name: Deploy Angular App
         run: |
-          cd Peckocko
+          cd ./Peckocko
           npm run build:app
