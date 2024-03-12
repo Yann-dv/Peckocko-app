@@ -38,8 +38,8 @@ jobs:
     steps:
     - name: Deploy API
       run: |
-        cd api
-        npm run start:api
+        whereami
+        ls
 
     - name: Deploy APP
       run: |
