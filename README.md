@@ -1,13 +1,15 @@
 # Peckocko #
 
+
+Forked from https://github.com/OpenClassrooms-Student-Center/dwj-projet6
+
 ## Local Installation ##
 
-1. Clone the repository
-2. Run `cd api && npm install`
-3. Run `nodemon`
-5. Run `cd ../app && nvm use 12.14.0`
-4. Run `npm install`
-6. Run `npm run start`
+1. Clone the repository from https://github.com/Yann-dv/Peckocko.git
+2. Run `nvm use 12.14.0`
+3. Run `npm install`
+5. Run `npm run start:api` -> localhost:3000
+4. Run `npm run start:app` ->
 
 ## Usage ##
 
