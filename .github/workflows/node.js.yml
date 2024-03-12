@@ -41,7 +41,8 @@ jobs:
     steps:
       - name: Deploy API
         run: |
-          cd $GITHUB_WORKSPACE/api  # Utilisez la variable GITHUB_WORKSPACE pour accéder au répertoire racine du dépôt
+          cd $GITHUB_WORKSPACE
+          cd $(find . -type d -name "api" -print -quit)
           npm install
           npm run start:api
 
