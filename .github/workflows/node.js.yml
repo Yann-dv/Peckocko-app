@@ -11,9 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check current directory
-        run: ls
-
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -22,6 +19,11 @@ jobs:
         with:
           node-version: 12.14.0
           cache: 'npm'
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '2.x'
 
       - name: Clear npm cache
         run: npm cache clean --force
