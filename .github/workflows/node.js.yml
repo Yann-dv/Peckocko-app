@@ -38,8 +38,8 @@ jobs:
     steps:
     - name: Deploy API
       run: |
-        whereami
         ls
+        tree
 
     - name: Deploy APP
       run: |
